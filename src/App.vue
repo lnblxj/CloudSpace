@@ -78,7 +78,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { TransitionGroup } from 'vue'
 import axios from 'axios'
-import gsap from 'gsap' // 如果使用 GSAP 动画库
+import gsap from 'gsap'
 
 const files = ref([])
 const announcement = ref('')
@@ -100,14 +100,11 @@ onMounted(async () => {
     directoryData = response.data.directory
     updateFileList()
     announcement.value = directoryData.announcement
-    
-    // 10秒后开始淡出动画
     setTimeout(() => {
       isAnnouncementFading.value = true
-      // 动画结束后隐藏公告
       setTimeout(() => {
         showAnnouncement.value = false
-      }, 1000) // 1秒淡出动画
+      }, 1000)
     }, 10000)
   } catch (error) {
     console.error('Error fetching data:', error)
@@ -115,7 +112,6 @@ onMounted(async () => {
 })
 
 const updateFileList = async () => {
-  // 添加一个短暂的延迟，使动画效果更明显
   await new Promise(resolve => setTimeout(resolve, 100))
   
   let currentDir = directoryData
@@ -205,8 +201,7 @@ const onEnter = (el, done) => {
     el.style.opacity = '1'
     el.style.transform = 'translateX(0)'
   }, delay)
-  
-  // 确保动画完成后调用 done
+
   setTimeout(done, delay + 300)
 }
 
@@ -230,35 +225,35 @@ const onBeforeLeave = (el) => {
   el.style.width = '100%'
 }
 
-// 修改打开文件夹的函数
+// 打开文件夹
 const openFolder = async (folder) => {
   isSwitching.value = true
-  await new Promise(resolve => setTimeout(resolve, 100)) // 等待旧列表消失
+  await new Promise(resolve => setTimeout(resolve, 100))
   
   currentPath.value += `/${folder.filename}`
   await updateFileList()
   
-  await new Promise(resolve => setTimeout(resolve, 50)) // 短暂延迟确保 DOM 更新
+  await new Promise(resolve => setTimeout(resolve, 50))
   isSwitching.value = false
 }
 
-// 修改返回上级的函数
+// 返回上级
 const goBack = async () => {
   if (!currentPath.value.includes('/')) return
   
   isSwitching.value = true
-  await new Promise(resolve => setTimeout(resolve, 100)) // 等待旧列表消失
+  await new Promise(resolve => setTimeout(resolve, 100))
   
   const pathArray = currentPath.value.split('/')
   pathArray.pop()
   currentPath.value = pathArray.join('/')
   await updateFileList()
   
-  await new Promise(resolve => setTimeout(resolve, 50)) // 短暂延迟确保 DOM 更新
+  await new Promise(resolve => setTimeout(resolve, 50)) 
   isSwitching.value = false
 }
 
-// 如果使用 GSAP 的替代实现方案
+
 const onEnterWithGSAP = (el, done) => {
   const delay = el.dataset.index * 0.05
   gsap.from(el, {
@@ -283,9 +278,9 @@ const onLeaveWithGSAP = (el, done) => {
   }
 }
 
-// 添加文件名格式化函数
+
 const formatFileName = (filename) => {
-  if (window.innerWidth <= 768) {  // 移动端
+  if (window.innerWidth <= 768) { 
     if (filename.length > 10) {
       return filename.slice(0, 8) + '...' + filename.slice(filename.lastIndexOf('.'));
     }
@@ -293,7 +288,7 @@ const formatFileName = (filename) => {
   return filename;
 }
 
-// 文件类型图标映射
+
 const fileIconMap = {
   // 文本文件
   'txt': 'fa fa-file-text-o',
@@ -343,7 +338,7 @@ const getFileIcon = (file) => {
   }
   
   const extension = file.filename.split('.').pop().toLowerCase()
-  return fileIconMap[extension] || 'fa fa-file-o' // 如果没有匹配的图标，返回默认图标
+  return fileIconMap[extension] || 'fa fa-file-o' 
 }
 </script>
 
@@ -384,7 +379,7 @@ const getFileIcon = (file) => {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   overflow: hidden;
   position: relative;
-  min-height: 100px; /* 设置最小高度防止切换时抖动 */
+  min-height: 100px; 
 }
 
 .file-item {
@@ -394,7 +389,7 @@ const getFileIcon = (file) => {
   border-bottom: 1px solid #eee;
 }
 
-/* 左侧：文件信息 */
+
 .file-info {
   display: flex;
   align-items: center;
@@ -421,7 +416,7 @@ const getFileIcon = (file) => {
   text-align: left;
 }
 
-/* 中间：文件类型和大小 */
+
 .file-meta {
   display: flex;
   justify-content: center;
@@ -438,7 +433,7 @@ const getFileIcon = (file) => {
   color: #666;
 }
 
-/* 右侧：操作按钮 */
+
 .file-actions {
   display: flex;
   gap: 8px;
@@ -536,7 +531,6 @@ i.fa {
   font-size: 14px;
   z-index: 1000;
   pointer-events: none;
-  /* 跟随鼠标位置，在script中设置 */
   top: 0;
   left: 0;
 }
@@ -573,12 +567,10 @@ i.fa {
 .list-leave-active,
 .list-enter-from,
 .list-leave-to {
-  /* 移除这些样式，因为我们现在使用 JavaScript 控制动画 */
 }
 
 /* 文件项淡入动画 */
 .file-item {
-  /* 移除动画相关样式 */
   position: relative;
   display: flex;
   align-items: center;
@@ -587,7 +579,6 @@ i.fa {
   cursor: pointer;
 }
 
-/* 优化过渡效果 */
 .header,
 .path-nav,
 .file-list {
@@ -630,7 +621,7 @@ i.fa {
   position: absolute;
 }
 
-/* 针对不同文件类型的图标颜色 */
+
 .fa-file-pdf-o { color: #ff4444; }
 .fa-file-word-o { color: #2b579a; }
 .fa-file-excel-o { color: #217346; }
@@ -642,7 +633,6 @@ i.fa {
 .fa-file-code-o { color: #0097a7; }
 .fa-folder { color: #ffd700; }
 
-/* 确保在所有设备上正确显示按钮 */
 @media screen and (min-width: 768px) {
   .file-actions {
     opacity: 1;
@@ -657,14 +647,12 @@ i.fa {
 }
 
 html {
-  /* 基本设置 */
   background-image: url('https://cdn-hsyq-static.shanhutech.cn/bizhi/staticwp/202408/8678d97dc81e1436b34b19a49e55f4bd--946961122.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  
-  /* 自适应设置 */
   background-size: cover;
   min-height: 100vh;
   width: 100%;
 }
+
 </style>
