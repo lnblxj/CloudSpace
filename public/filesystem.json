@@ -1,0 +1,265 @@
+{
+    "directory": {
+        "name": "根目录",
+        "announcement": "🤔下载速度慢？等几分钟再下载试试 （等待CDN缓存完成）",
+        "files": [
+            {
+                "filename": "工作汇报.pptx",
+                "size": 102400,
+                "downloadUrl": "blanck",
+                "type": "pptx",
+                "description": "工作汇报"
+            },
+            {
+                "filename": "青花瓷-周杰伦.mp3",
+                "size": 20480,
+                "downloadUrl": "blanck",
+                "type": "mp3",
+                "description": "音乐"
+            },
+            {
+                "filename": "照片.png",
+                "size": 24003,
+                "downloadUrl": "0",
+                "type": "0",
+                "description": "0"
+            },
+            {
+                "filename": "大头照.jpg",
+                "size": 465643,
+                "downloadUrl": "35",
+                "type": "31",
+                "description": "13"
+            }
+        ],
+        "subdirectories": [
+            {
+                "name": "软件",
+                "files": [
+                    {
+                        "filename": "SpaceSniffer.exe",
+                        "size": 2309632,
+                        "downloadUrl": "https://file.sboxm.eu.org/large/SpaceSniffer.exe",
+                        "type": "program",
+                        "description": "可视化磁盘占用工具"
+                    }
+                ],
+                "subdirectories": []
+            },
+            {
+                "name": "图片测试",
+                "files": [
+                    {
+                        "filename": "1724429679740.jpg",
+                        "size": 2309632,
+                        "downloadUrl": "https://file.sboxm.eu.org/1724429679740.jpg",
+                        "type": "jpg",
+                        "description": "测试图片"
+                    }
+                ],
+                "subdirectories": []
+            },
+            {
+                "name": "运行环境",
+                "files": [],
+                "subdirectories": [
+                    {
+                        "name": "jdk",
+                        "files": [],
+                        "subdirectories": [
+                            {
+                                "name": "oraclejdk",
+                                "files": [],
+                                "subdirectories": [
+                                    {
+                                        "name": "8",
+                                        "files": [
+                                            {
+                                                "filename": "jdk-8u421-windows-x64.exe",
+                                                "size": 79078359,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/8/jdk-8u421-windows-x64.exe",
+                                                "type": "exe",
+                                                "description": "jdk-8u421-windows-x64"
+                                            },
+                                            {
+                                                "filename": "jdk-8u421-linux-x64.tar.gz",
+                                                "size": 146727239,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/8/jdk-8u421-linux-x64.tar.gz",
+                                                "type": "exe",
+                                                "description": "jdk-8u421-linux-x64.tar.gz"
+                                            }
+                                        ],
+                                        "subdirectories": []
+                                    },
+                                    {
+                                        "name": "17",
+                                        "files": [
+                                            {
+                                                "filename": "jdk-17_windows-x64_bin.exe",
+                                                "size": 161396817,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/17/jdk-17_windows-x64_bin.exe",
+                                                "type": "jdk-17_windows-x64_bin.exe",
+                                                "description": "jdk-17_windows-x64_bin.exe"
+                                            },
+                                            {
+                                                "filename": "jdk-17_linux-x64_bin.tar.gz",
+                                                "size": 182798254,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/17/jdk-17_linux-x64_bin.tar.gz",
+                                                "type": "tar",
+                                                "description": "jdk-17_linux-x64_bin.tar.gz"
+                                            }
+                                        ],
+                                        "subdirectories": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "电影",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "音乐",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "笔记",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "书籍",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "照片",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "文件夹",
+                "files": [],
+                "subdirectories": [{
+                "name": "软件",
+                "files": [
+                    {
+                        "filename": "SpaceSniffer.exe",
+                        "size": 2309632,
+                        "downloadUrl": "https://file.sboxm.eu.org/large/SpaceSniffer.exe",
+                        "type": "program",
+                        "description": "可视化磁盘占用工具"
+                    }
+                ],
+                "subdirectories": []
+            },
+            {
+                "name": "图片测试",
+                "files": [
+                    {
+                        "filename": "1724429679740.jpg",
+                        "size": 2309632,
+                        "downloadUrl": "https://file.sboxm.eu.org/1724429679740.jpg",
+                        "type": "jpg",
+                        "description": "测试图片"
+                    }
+                ],
+                "subdirectories": []
+            },
+            {
+                "name": "运行环境",
+                "files": [],
+                "subdirectories": [
+                    {
+                        "name": "jdk",
+                        "files": [],
+                        "subdirectories": [
+                            {
+                                "name": "oraclejdk",
+                                "files": [],
+                                "subdirectories": [
+                                    {
+                                        "name": "8",
+                                        "files": [
+                                            {
+                                                "filename": "jdk-8u421-windows-x64.exe",
+                                                "size": 79078359,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/8/jdk-8u421-windows-x64.exe",
+                                                "type": "exe",
+                                                "description": "jdk-8u421-windows-x64"
+                                            },
+                                            {
+                                                "filename": "jdk-8u421-linux-x64.tar.gz",
+                                                "size": 146727239,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/8/jdk-8u421-linux-x64.tar.gz",
+                                                "type": "exe",
+                                                "description": "jdk-8u421-linux-x64.tar.gz"
+                                            }
+                                        ],
+                                        "subdirectories": []
+                                    },
+                                    {
+                                        "name": "17",
+                                        "files": [
+                                            {
+                                                "filename": "jdk-17_windows-x64_bin.exe",
+                                                "size": 161396817,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/17/jdk-17_windows-x64_bin.exe",
+                                                "type": "jdk-17_windows-x64_bin.exe",
+                                                "description": "jdk-17_windows-x64_bin.exe"
+                                            },
+                                            {
+                                                "filename": "jdk-17_linux-x64_bin.tar.gz",
+                                                "size": 182798254,
+                                                "downloadUrl": "https://d.injdk.cn/d/download/oraclejdk/17/jdk-17_linux-x64_bin.tar.gz",
+                                                "type": "tar",
+                                                "description": "jdk-17_linux-x64_bin.tar.gz"
+                                            }
+                                        ],
+                                        "subdirectories": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "电影",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "音乐",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "笔记",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "书籍",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "照片",
+                "files": [],
+                "subdirectories": []
+            },
+            {
+                "name": "文件夹",
+                "files": [],
+                "subdirectories": []
+            }]
+            }
+        ]
+    }
+}

@@ -96,7 +96,8 @@ const displayFiles = computed(() => isSwitching.value ? [] : sortedFiles.value)
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://cnhkbbs.github.io/jstools/cloudspace/filelist.json')
+    //const response = await axios.get('https://cnhkbbs.github.io/jstools/cloudspace/filelist.json')
+	const response = await axios.get('https://lnblxj.github.io/jstools/cloudspace/filelist.json')
     directoryData = response.data.directory
     updateFileList()
     announcement.value = directoryData.announcement
